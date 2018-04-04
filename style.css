@@ -1,7 +1,28 @@
-.grid {
+* {box-sizing: border-box;}
+/* grid1 box sizing does not change as the size of the window changes because it is given strict px */
+.grid1 {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 100px;
+  grid-auto-rows: 150px;
+  /* these two lines do the same as the line below it
+  grid-column-gap: 10px;
+  grid-row-gap: 10px; */
+  grid-gap: 10px;
+}
 
+/* grid2 does change box sizing as the window changes (fr=fractional unit) but you can also mix fixed px with fr */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 200px;
+  grid-gap: 10px;
 }
 
 .grid div {
-  
+  border: 1px solid rgb(0,95,107);
+  border-radius: 3px;
+  background-color: rgba(0,95,107, .8);
+  padding: 0.2em;
+  color: #fff;
+  font-size: 120%
 }
